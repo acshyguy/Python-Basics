@@ -86,28 +86,25 @@
 
 
 
-##Class Work
+##Class Work  #To get email in the setting below
+## "segun.ade@gmail.com" 
+
+##Atempt 1
 # pattern = "segun.ade@gmail.com"
 # matcher = re.finditer("[a-zA-Z0-9]+[.][a-zA-Z0-9]+[@][a-zA-Z]+[.][a-z]{3}", pattern)
 # for match in matcher:
 #     print(match.start(), "...", match.group())
 
-# #Solution
+# # Correct Solution 
 # def test():
 #     count=0
 #     matcher = re.finditer("\w +\ . \w + @ \w + \. \w{3}", "segun.ade@gmail.com")
 #     for match in matcher:
-#         count += 1
-#         print(match.start(), "...",match.end(), "...", match.group())
-#         print("The number of occurrence: ", count)
+#         print(match.start(), "...", match.group())
+#         print("The number of occurrence:", count)
 
 ##For Phone number
-#         count=0
-#         matcher = re.finditer("\w +\ . \w + @ \w + \. \w{3}", "segun.ade@gmail.com")
-#         for match in matcher:
-#             count += 1
-#             print(match.start(), "...",match.end(), "...", match.group())
-#             print("The number of occurrence: ", count)
+
 
 
 # #search()
@@ -144,10 +141,25 @@
 # print("The Result String:", t[0])
 # print("The number of replacements:", t[1])
 
-import re
-s=input("Enter Mail id:")
-m=re.fullmatch("\w[a-zA-Z0-9_.]*@gmail[.]com", s)
-if m != None:
-    print("Valid Mail Id")
-else:
-    print("Invalid Mail Id")
+
+## Writing a correct gmail id
+# import re
+# s=input("Enter Mail id:")
+# m=re.fullmatch("\w[a-zA-Z0-9_.]*@gmail[.]com", s)
+# if m != None:
+#     print("Valid Mail Id")
+# else:
+#     print("Invalid Mail Id")
+
+### Extraction of mobile numbers from text 
+# # The sample format is below
+# import re
+# f1=open("input.txt", "r")
+# f2=open("output.txt", "w")
+# for line in f1:
+#     items = re.findall("[7-9]\d{9}",line)
+#     for n in items:
+#         f2.write(n+"\n")
+# print("Extracted all Mobile Numbers into output.txt")
+# f1.close()
+# f2.close()
